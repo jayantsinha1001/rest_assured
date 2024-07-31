@@ -40,7 +40,7 @@ public class firstgetRequest {
     }
 
     @Test
-    public void test_put04(){
+    public void validateHeader(){
         JSONObject jsonObject =  new JSONObject();
         jsonObject.put("Name" ,"SITA");
         jsonObject.put("Job","BA");
