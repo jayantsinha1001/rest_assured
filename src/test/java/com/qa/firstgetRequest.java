@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class firstgetRequest {
 
     @Test
-    void testcase01(){
+    void getRequest(){
         Response res = RestAssured.get("https://reqres.in/api/users?page=2");
         System.out.println(res.asString());
         System.out.println("status code :  " + res.getStatusCode());
@@ -25,7 +25,7 @@ public class firstgetRequest {
     }
 
     @Test
-    public void test_post03(){
+    public void postRequest(){
 
         JSONObject jsonObject =  new JSONObject();
         jsonObject.put("Name" ,"Ram");

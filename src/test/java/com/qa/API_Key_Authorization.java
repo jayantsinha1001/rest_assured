@@ -16,11 +16,11 @@ public class API_Key_Authorization {
         RequestSpecification requestSpec = RestAssured.given();
         requestSpec.baseUri("https://api.openweathermap.org");
         requestSpec.basePath("/data/2.5/weather");
-        requestSpec.queryParam("city name" , "Dhanbad").queryParam("API key","a77ba38316028c4a13ca2fc39283179d");
+        requestSpec.queryParam("q" , "Dhanbad").queryParam("appid","a77ba38316028c4a13ca2fc39283179d");
         Response response= requestSpec.get();
 
         //validate status code
-        Assert.assertEquals((response.getStatusCode()), 401);
+        Assert.assertEquals((response.getStatusCode()), 200);
 
         //print status line and response body
         System.out.println("Response status line " + response.statusLine());
